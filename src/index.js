@@ -98,8 +98,8 @@ const operations = {
   eigths: '/8',
   ninth: '/9',
   ninths: '/9',
-  squared: '**2',
-  cubed: '**3',
+  squared: 'squared',
+  cubed: 'cubed',
   root: 'root',
   exponent: 'exponent',
   power: 'power',
@@ -112,6 +112,7 @@ const filteredWords = {
   of: 'of',
   to: 'to',
   the: 'the',
+  by: 'by',
 };
 
 // 3 cases:
@@ -194,6 +195,12 @@ const calculate = (mathQuery, callback) => {
       memo.push(Math.sqrt(Number(eval(arr[i + 2]))));
       skipCount = 1;
       skip = true;
+    } else if (curr === 'squared') {
+      memo.splice(i - 1, 1);
+      memo.push(Math.pow(Number(arr[i - 1]), 2));
+    } else if (curr === 'cubed') {
+      memo.splice(i - 1, 1);
+      memo.push(Math.pow(Number(arr[i - 1]), 3));
     } else {
       memo.push(curr);
     }

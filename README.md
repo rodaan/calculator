@@ -3,7 +3,7 @@
 Text calculator built with web speech API in mind but is able to translate text and calculate it. Was built for calculating 'math-speak'.
 
 ### Version
-1.0.0
+1.1.0
 
 ### Installation
 ```sh
@@ -28,6 +28,20 @@ textCalculator.calculate(mathQuery, (result) => {
 'million one hundred' --> 1000100
 'sdfdsfhjkdf' --> 'error'
 'parenthesis million parenthesis one hundred' --> 'error'
+'5 exponent 2' --> 25
+'5 to the power of 2' --> 25
+'6 ^ 5' --> 7776
+'5 mod 2' --> 1
+'5 divided by 2' --> 2.5
+'four divide four' --> 1
+'square root of 4' --> 2
+'million plus one tenth' --> 1000000.1
+'half' --> 0.5
+'6 take away 3' --> 3
+'6 minus 3' --> 3
+'5 cubed' --> 125
+'6 squared' --> 36
+and many more...
 
 
 ```    
